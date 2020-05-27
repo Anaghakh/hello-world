@@ -58,12 +58,11 @@ GET A Record by passing Reference, Name or IPv4Addr
 	fmt.Println(objMgr.GetARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView"}))
 	
 UPDATE IP Address or Name or Extensible Attributes
-
-	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref:"record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Ipv4Addr: "192.168.2.3"})
-													 fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref:"record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Name: "updatedName.myZone.com"})
+	
+	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Ipv4Addr: "192.168.2.3"})
+	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Name: "updatedName.myZone.com"})
 	ea := ibclient.EA{"Cloud API Owned": ibclient.Bool(false)}
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Ea: ea})
-	
 Delete A record by passing Reference or Name or Ipv4Addr
  
  	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{Name: "myRecord.myZone.com"}))
