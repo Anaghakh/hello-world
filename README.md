@@ -48,17 +48,21 @@ This library is compatible with Go 1.2+
 	
 ## Example of CRUD Operations on A Record:
 CREATE
+	
 	fmt.Println(objMgr.CreateARecord(ibclient.RecordA{Name:"myRecord.myZone.com", View: "myDNSView", Ipv4Addr: "192.168.2.7"}))
 	
-	GET A Record by passing Reference, Name or IPv4Addr
+GET A Record by passing Reference, Name or IPv4Addr
+
 	fmt.Println(objMgr.GetARecord(ibclient.RecordA{Name: "myRecord.myZone.com"}))
 	fmt.Println(objMgr.GetARecord(ibclient.RecordA{IPv4Addr: "192.168.2.7"}))
 	fmt.Println(objMgr.GetARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView"}))
 	
-	UPDATE IP Address
+UPDATE IP Address
+
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", 
 													  Ipv4Addr: "192.168.2.3"})
-	Update Name
+Update Name
+
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", 
 													  Name: "updatedName.myZone.com"})
 	Update Extensible Attributes
@@ -66,8 +70,9 @@ CREATE
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", 
 													  Ea: ea})
 	
-	Delete A record by passing Reference or Name or Ipv4Addr
-	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{Name: "myRecord.myZone.com"}))
+Delete A record by passing Reference or Name or Ipv4Addr
+ 
+ 	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{Name: "myRecord.myZone.com"}))
 	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{IPv4Addr: "192.168.2.7"}))
 	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView"}))
 	
