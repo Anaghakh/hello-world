@@ -47,7 +47,7 @@ This library is compatible with Go 1.2+
        }
 	
 ## Example of CRUD Operations on A Record:
-	CREATE
+# CREATE
 	fmt.Println(objMgr.CreateARecord(ibclient.RecordA{Name:"myRecord.myZone.com", View: "myDNSView", Ipv4Addr: "192.168.2.7"}))
 	
 	GET A Record by passing Reference, Name or IPv4Addr
