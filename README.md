@@ -46,7 +46,7 @@ This library is compatible with Go 1.2+
    	    fmt.Println(objMgr.GetLicense())
        }
 	
-	Example of CRUD Operations on A Record:
+## Example of CRUD Operations on A Record:
 	CREATE
 	fmt.Println(objMgr.CreateARecord(ibclient.RecordA{Name:"myRecord.myZone.com", View: "myDNSView", Ipv4Addr: "192.168.2.7"}))
 	
