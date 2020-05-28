@@ -63,7 +63,7 @@ UPDATE IP Address or Name or Extensible Attributes
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Name: "updatedName.myZone.com"})
 	ea := ibclient.EA{"Cloud API Owned": ibclient.Bool(false)}
 	fmt.Println(objMgr.UpdateARecord(ibclient.RecordA{Ref: "record:a/ZG5zLmJpbmRfYSQuMTguY29tLnRlc3QsaW5mbzEsMTkyLjE2OS4yLjU:myRecord.myZone.com/myDNSView", Ea: ea})
-Delete A record by passing Reference or Name or Ipv4Addr
+DELETE A record by passing Reference or Name or Ipv4Addr
  
  	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{Name: "myRecord.myZone.com"}))
 	fmt.Println(objMgr.DeleteARecord(ibclient.RecordA{IPv4Addr: "192.168.2.7"}))
@@ -94,5 +94,5 @@ Delete A record by passing Reference or Name or Ipv4Addr
    
 ### New Methods
    * GET by Name or Ipv4Address or view
-   * Delete by Name or Ipv4Address
-   * Update Name, Ipv4Address or Extensible Attributes of A Record
+   * DELETE by Name or Ipv4Address
+   * UPDATE Name, Ipv4Address or Extensible Attributes of A Record
