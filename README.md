@@ -91,3 +91,8 @@ Delete A record by passing Reference or Name or Ipv4Addr
    * GetCapacityReport
    * GetAllMembers
    * GetUpgradeStatus (2.7 or above)
+   
+### New Methods
+   * GET by Name or Ipv4Address or view
+   * Delete by Name or Ipv4Address
+   * Update Name, Ipv4Address or Extensible Attributes of A Record
